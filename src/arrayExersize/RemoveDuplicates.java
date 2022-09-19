@@ -5,28 +5,36 @@ import java.util.Arrays;
 public class RemoveDuplicates {
 
 	public static void main(String[] args) {
-		int[] a = { 2, 2, 5, 5, 6, 8 };
+		int[] a = { 2, 2, 5, 5, 6, 8, 8 };
 		int i;
 		int j;
-		int count;
+		int b[] = new int[a.length];
+//		int count;
 		System.out.println(" updated array is :");
+		int k = 0;
 
-		for (j = 0; j < a.length; j++) {
-			 count = 0;
-			for (i = j+1; i < a.length; i++) {
-				if (a[j] == a[i]) {
+		for ( i = 0; i < a.length; i++) {
+			int count = 0;
+			for ( j = i + 1; j < a.length; j++) {
+				if (a[i] == a[j]) {
 					count++;
-
+//					System.out.println(count);
 				}
 
 			}
 
-			if(count<1) {
-				System.out.print("  " +a[j]);
+			if (count < 1) {
+				b[k] = a[i];
+				k++;
+//				System.out.println(a[i]);
 			}
 
-
 		}
+		int c[] = new int[k];
+		for (i = 0; i < c.length; i++)
+			c[i] = b[i];
+
+		System.out.println(Arrays.toString(c));
 
 	}
 }

@@ -15,7 +15,7 @@ public class RemovieGivenElement {
 		{
 			a[i]= sc.nextInt();
 		}
-		System.out.println("Given array is: \n "+Arrays.toString(a));
+//		System.out.println("Given array is: \n "+Arrays.toString(a));
 		
 		System.out.println("Enter removing element : ");
 		
